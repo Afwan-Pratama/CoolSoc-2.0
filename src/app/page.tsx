@@ -13,9 +13,14 @@ export default async function Home() {
   const session = await getServerAuthSession();
 
   return (
-    <>
-      <Sidebar />
-      <main className="flex min-h-screen flex-col items-center justify-center"></main>
-    </>
+    <div className="text-font flex dark:text-font-dark">
+      <nav className="basis-3/12">
+        <Sidebar />
+      </nav>
+      <main className="flex min-h-screen basis-6/12 flex-col items-center justify-center">
+        main
+      </main>
+      <aside className="basis-3/12">aside</aside>
+    </div>
   );
 }
